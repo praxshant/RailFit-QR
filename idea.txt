@@ -13,7 +13,7 @@ Hardware
 			§ Portable, battery-powered (12V LiPo) for field testing.
 		○ Safety: Acrylic enclosure for laser safety (CDRH Class I), ventilation for fumes.
 Software
-	• Mobile QR Scanning App (Flutter-based): 
+	• QR Scanning Website: 
 		○ Scans QR codes on fittings using phone cameras, works offline, and syncs with UDM (www.ireps.gov.in) and TMS (www.irecept.gov.in) via APIs.
 		○ Displays vendor details, supply date, warranty, and inspection history.
 	• AI Analytics Engine (Python-based): 
@@ -53,11 +53,11 @@ Goal: Build a basic hardware setup and app skeleton, define AI models, and test 
 		○ Tools: Python, TensorFlow, OpenCV, Jupyter Notebook.
 	• Full-Stack Team (2 people): 
 		○ Tasks: 
-			§ Build a basic Flutter app with QR scanning (using qr_code_scanner package) and offline storage (SQLite).
+			§ Build a basic website with QR scanning (using qr_code_scanner package) and offline storage (SQLite).
 			§ Mock UDM/TMS APIs with dummy JSON data for testing (real APIs need railway access).
 			§ Set up a Django backend with PostgreSQL for data storage and a React dashboard skeleton.
-		○ Start: Clone GitHub repos like html5-qrcode for scanning inspiration. Use VS Code and Flutter SDK.
-		○ Tools: Flutter, Django, React, Postman for API mocks.
+		○ Start: Clone GitHub repos like html5-qrcode for scanning inspiration. Use VS Code.
+		○ Tools: Django, React, Postman for API mocks.
 	• Deliverables: Basic laser marking prototype, app with QR scanning, initial ML model for material detection.
 Phase 2: Development and Integration (Weeks 4–8)
 Goal: Enhance hardware precision, integrate AI with app, and add AR features.
@@ -131,18 +131,18 @@ ML Engineers (2 people)
 		○ Optimize models for edge devices (e.g., Raspberry Pi for field use).
 	• Tools: Python, TensorFlow, OpenCV, Hugging Face, Colab.
 Full-Stack Developers (2 people)
-	• Member 1: App Developer: 
-		○ Build Flutter app with QR scanning (qr_code_scanner) and AR (ARCore/ARKit).
+	• Member 1: Frontend Developer: 
+		○ Build React app with QR scanning (qr_code_scanner) and AR (ARCore/ARKit).
 		○ Implement offline storage (SQLite) and multilingual UI (English/Hindi).
 		○ Test app on low-end phones and AR on mid-range devices.
 	• Member 2: Backend and Dashboard Developer: 
 		○ Develop Django backend with PostgreSQL for data storage and FastAPI for AI integration.
 		○ Build React dashboard with visualizations (Chart.js) and alerts (SendGrid).
 		○ Mock UDM/TMS APIs and ensure secure data sync (AES-256).
-	• Tools: Flutter, Django, React, Postman, VS Code.
+	• Tools: Django, React, Postman, VS Code.
 
 Feasibility Considerations
-	• Cost: Total prototype ~₹20,000–30,000 ($250–350), including ESP32 (₹400 x 2), Nema-17 (₹1,200 x 2), Engraver-2 (₹10,000), frame/camera (₹5,000), and misc (₹2,000). Software uses free tools (Flutter, Python, open-source datasets).
+	• Cost: Total prototype ~₹20,000–30,000 ($250–350), including ESP32 (₹400 x 2), Nema-17 (₹1,200 x 2), Engraver-2 (₹10,000), frame/camera (₹5,000), and misc (₹2,000). Software uses free tools (React, Python, open-source datasets).
 	• Resources: Components available on Robu.in, Amazon India, or local electronics markets. Use free cloud tiers (AWS/GCP) and open datasets (Roboflow, Kaggle).
 	• Scalability: ESP32’s Wi-Fi enables cloud sync, and the 2D system is compact for depot use. Software scales via cloud for millions of fittings.
 	• Hackathon Fit: Prototype is achievable in 3–4 months, ideal for a 6-person team with diverse skills.
