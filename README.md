@@ -34,7 +34,7 @@
 **What It Does**: A phone app and website that scan QR codes, show fitting details, predict problems with AI, and use AR to help workers in the field.
 
 **Parts**:
-1. **Mobile App (Flutter)**:
+1. **Website**:
    - Scans QR codes with a phone camera, showing vendor, supply date, warranty, and inspection info.
    - Works offline and supports English/Hindi.
    - Connects to UDM (www.ireps.gov.in) and TMS (www.irecept.gov.in) for data.
@@ -89,13 +89,13 @@
 - **Tools**: Python, TensorFlow, OpenCV, Hugging Face, Colab.
 
 ### Full-Stack Developers
-- **App Developer**:
-  - Build Flutter app with QR scanning and AR.
+- **Frontend Developer**:
+  - Build React app with QR scanning and AR.
   - Add offline storage and English/Hindi UI.
 - **Backend and Dashboard Developer**:
-  - Create Django backend and React dashboard.
+  - Create backend and React dashboard.
   - Mock UDM/TMS APIs and add alerts.
-- **Tools**: Flutter, Django, React, Postman, VS Code.
+- **Tools**: Django, React, Postman, VS Code.
 
 ## Feasibility
 - **Cost**: ~₹20,000–30,000 (ESP32: ₹800, Nema-17: ₹2,400, Engraver-2: ₹10,000, frame/camera/battery: ₹7,000).
