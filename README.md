@@ -65,7 +65,7 @@
 
 ### Deliverables
 - **Hardware**: A laser system marking QR codes on 500 sample fittings.
-- **Software**: An app with QR scanning, AR, and AI, plus a web dashboard.
+- **Software**: A Website with QR scanning, AR, and AI, plus a web dashboard.
 - **Integration**: Mock connection to UDM/TMS for data and alerts.
 
 ## Team Roles
