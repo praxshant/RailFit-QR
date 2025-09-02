@@ -1,6 +1,6 @@
 # QR on Track: AI-Enabled TrackFit Scanner
 
-**Hinglish Name**: TrackFit QR Scanner  
+**Hinglish Name**: Railfit Bar Scanner  
 **Purpose**: A smart system for Indian Railways to mark QR codes on track fittings (metal clips, rubber pads, concrete sleepers) and track them using an AI-powered mobile app with augmented reality (AR). It connects to railway portals (UDM and TMS) to monitor quality, manage inventory, and ensure safety. Built for Smart India Hackathon 2025.
 
 **Team**: 6 members (2 Hardware, 2 Machine Learning, 2 Full-Stack).
