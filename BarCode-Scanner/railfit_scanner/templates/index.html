@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RailFit-QR Scanner</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>RailFit-QR Scanner</h1>
+        <nav>
+            <a href="/" class="nav-link active">Scanner</a>
+            <a href="/generate" class="nav-link">Generate</a>
+        </nav>
+    </header>
+    
+    <main class="container">
+        <!-- Webcam Scanner Section -->
+        <section class="scanner-section">
+            <h2>Scan via Webcam</h2>
+            <div class="video-container">
+                <video id="video" autoplay muted></video>
+                <canvas id="canvas" style="display: none;"></canvas>
+            </div>
+            <div class="controls">
+                <button id="start-camera" class="btn-primary">Start Camera</button>
+                <button id="stop-camera" class="btn-secondary" disabled>Stop Camera</button>
+            </div>
+            <div id="scanning-status" class="status-message">Ready to scan</div>
+        </section>
+        
+        <!-- File Upload Section -->
+        <section class="upload-section">
+            <h2>Upload Image</h2>
+            <div id="drop-zone" class="drop-zone">
+                <p>Drag & Drop barcode image here or click to browse</p>
+                <input type="file" id="file-input" accept="image/*" hidden>
+            </div>
+            <img id="preview" class="preview-image" style="display: none;">
+        </section>
+        
+        <!-- Results Section -->
+        <section class="results-section">
+            <h2>Decoded Result</h2>
+            <div id="result-container">
+                <div id="result-text" class="result-text">No barcode scanned yet</div>
+                <button id="copy-result" class="btn-copy" style="display: none;">
+                    <span class="copy-icon">📋</span> Copy
+                </button>
+            </div>
+        </section>
+    </main>
+    
+    <script src="{{ url_for('static', filename='js/scanner.js') }}"></script>
+</body>
+</html>
