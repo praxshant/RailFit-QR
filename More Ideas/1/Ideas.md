@@ -1,9 +1,9 @@
 Innovative Features to Add
-1. Smart Barcodes with AI Diagnostics
+1. **Smart Barcodes with AI Diagnostics**
 
-Instead of storing only static component info (vendor, date, warranty), each barcode could link to a dynamic AI health profile.
+- Instead of storing only static component info (vendor, date, warranty), each barcode could link to a dynamic AI health profile.
 
-Example:
+- Example:
 
 A track fitting’s barcode not only shows vendor details but also integrates sensor/inspection logs (from field engineers).
 
@@ -11,15 +11,15 @@ AI flags whether this fitting is nearing wear & tear based on patterns from simi
 
 Every scan becomes a mini predictive maintenance check.
 
-2. Offline + Delayed Sync Capability
+2. **Offline + Delayed Sync Capability**
 
-Railway sites often have poor connectivity.
+- Railway sites often have poor connectivity.
 
-Your web app could allow scanning offline, cache the data, and sync back to UDM/TMS once online.
+- Your web app could allow scanning offline, cache the data, and sync back to UDM/TMS once online.
 
-This is a huge practical advantage for Indian Railways.
+- This is a huge practical advantage for Indian Railways.
 
-3. Fraud/Counterfeit Detection
+3. **Fraud/Counterfeit Detection**
 
 Barcodes are prone to duplication. Add:
 
