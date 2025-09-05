@@ -11,7 +11,7 @@ AI flags whether this fitting is nearing wear & tear based on patterns from simi
 
 Every scan becomes a mini predictive maintenance check.
 
-2. **Offline + Delayed Sync Capability**
+2. ***Offline + Delayed Sync Capability***
 
 - Railway sites often have poor connectivity.
 
@@ -65,7 +65,7 @@ Every scan becomes a mini predictive maintenance check.
 
 - Saves huge time in inventory and quality checks.
 
-7. **Vendor Performance Dashboard**
+7. ***Vendor Performance Dashboard***
 
 - Beyond barcodes, your system can rate vendors:
 
@@ -93,7 +93,7 @@ Prototype an AR overlay:
 
 - This futuristic touch will blow judges away (even if partially implemented).
 
-10. **Sustainability Angle (Green Railways)**
+10. ***Sustainability Angle (Green Railways)***
 
 - Add a feature where each barcode also links to the material recycling/reuse path.
 
