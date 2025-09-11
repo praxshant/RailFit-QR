@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Indian Railways - Track Fittings QR System</title>
+    <link rel="manifest" href="manifest.json" />
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <!-- Header -->
+    <header class="ir-header">
+        <div class="header-container">
+            <div class="logo-section">
+                <img src="https://www.indianrail.gov.in/enquiry/StaticPages/images/ir_logo.png" alt="Indian Railways" class="ir-logo" />
+                <div class="logo-text">
+                    <h1>भारतीय रेल</h1>
+                    <h2>INDIAN RAILWAYS</h2>
+                    <p>Track Fittings QR System</p>
+                </div>
+            </div>
+            <div class="user-info" id="user-info" style="display: none;">
+                <span id="user-name"></span>
+                <button onclick="logout()" class="logout-btn">Logout</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="ir-nav" role="navigation" aria-label="Primary">
+        <div class="nav-container">
+            <ul class="nav-menu" role="menubar">
+                <li role="none"><a role="menuitem" href="/web/" class="active">Home</a></li>
+                <li role="none"><a role="menuitem" href="about.html">About</a></li>
+                <li role="none"><a role="menuitem" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <!-- Login Section -->
+        <section id="login-section" class="section">
+            <div class="container">
+                <div class="login-card">
+                    <h2>Access Railway QR System</h2>
+                    <p>Select your role and login to access the system</p>
+
+                    <form id="login-form" class="login-form">
+                        <div class="form-group">
+                            <label>Select Your Role:</label>
+                            <div class="role-selection">
+                                <input type="radio" id="manufacturer" name="role" value="manufacturer" />
+                                <label for="manufacturer" class="role-card">
+                                    <div class="role-icon">🏭</div>
+                                    <div class="role-info">
+                                        <h3>Manufacturer</h3>
+                                        <p>Generate QR codes for manufactured parts</p>
+                                    </div>
+                                </label>
+
+                                <input type="radio" id="vendor" name="role" value="vendor" />
+                                <label for="vendor" class="role-card">
+                                    <div class="role-icon">🏪</div>
+                                    <div class="role-info">
+                                        <h3>Vendor</h3>
+                                        <p>Access parts database and UDM/TMS links</p>
+                                    </div>
+                                </label>
+
+                                <input type="radio" id="official" name="role" value="railway_official" />
+                                <label for="official" class="role-card">
+                                    <div class="role-icon">🚂</div>
+                                    <div class="role-info">
+                                        <h3>Railway Official</h3>
+                                        <p>Scan and verify QR codes</p>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="username">Username:</label>
+                            <input type="text" id="username" name="username" required placeholder="Enter your username" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" name="password" required placeholder="Enter your password" />
+                        </div>
+
+                        <button type="submit" class="btn-primary">Login to System</button>
+                    </form>
+
+                    <div class="login-help">
+                        <h4>Demo Credentials:</h4>
+                        <p><strong>Manufacturer:</strong> manufacturer / mfg123</p>
+                        <p><strong>Vendor:</strong> vendor / vendor123</p>
+                        <p><strong>Railway Official:</strong> official / rail123</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Manufacturer Dashboard -->
+        <section id="manufacturer-section" class="section" style="display: none;">
+            <div class="container">
+                <div class="dashboard-header">
+                    <h2>🏭 Manufacturer Dashboard</h2>
+                    <p>Generate QR codes for manufactured railway parts</p>
+                </div>
+
+                <div class="qr-generator-card">
+                    <h3>Generate QR Code</h3>
+                    <form id="qr-generator-form" class="generator-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="mfg-item-id">Item ID:</label>
+                                <input type="text" id="mfg-item-id" name="item_id" required placeholder="EC-2025-001234" />
+                            </div>
+                            <div class="form-group">
+                                <label for="mfg-item-type">Item Type:</label>
+                                <select id="mfg-item-type" name="item_type" required>
+                                    <option value="">Select Type</option>
+                                    <option value="elastic_rail_clip">Elastic Rail Clip</option>
+                                    <option value="rail_pad">Rail Pad</option>
+                                    <option value="liner">Liner</option>
+                                    <option value="sleeper">Sleeper</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="mfg-vendor-lot">Vendor Lot:</label>
+                                <input type="text" id="mfg-vendor-lot" name="vendor_lot" required placeholder="VL2025001" />
+                            </div>
+                            <div class="form-group">
+                                <label for="mfg-supply-date">Supply Date:</label>
+                                <input type="date" id="mfg-supply-date" name="supply_date" required />
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="mfg-warranty">Warranty Period:</label>
+                                <input type="text" id="mfg-warranty" name="warranty_period" placeholder="5 years" />
+                            </div>
+                        </div>
+                        <button type="submit" class="btn-primary">Generate QR Code</button>
+                    </form>
+
+                    <div id="qr-result" class="qr-result" style="display: none;">
+                        <h4>Generated QR Code:</h4>
+                        <div class="qr-display">
+                            <img id="qr-image" alt="Generated QR Code" />
+                            <div class="qr-info">
+                                <p><strong>QR Reference:</strong> <span id="qr-ref"></span></p>
+                                <p><strong>Status:</strong> <span class="status-success">Generated Successfully</span></p>
+                                <button onclick="downloadQR()" class="btn-secondary">Download QR</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vendor Dashboard -->
+        <section id="vendor-section" class="section" style="display: none;">
+            <div class="container">
+                <div class="dashboard-header">
+                    <h2>🏪 Vendor Dashboard</h2>
+                    <p>Access parts database and manage inventory links</p>
+                </div>
+                <div class="vendor-tools">
+                    <div class="tool-card">
+                        <h3>Search Parts Database</h3>
+                        <form id="parts-search-form" class="search-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="search-part-type">Part Type:</label>
+                                    <select id="search-part-type" name="part_type">
+                                        <option value="">All Types</option>
+                                        <option value="elastic_rail_clip">Elastic Rail Clip</option>
+                                        <option value="rail_pad">Rail Pad</option>
+                                        <option value="liner">Liner</option>
+                                        <option value="sleeper">Sleeper</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="search-supplier">Supplier:</label>
+                                    <input type="text" id="search-supplier" name="supplier" placeholder="Supplier name or code" />
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="search-date-from">From Date:</label>
+                                    <input type="date" id="search-date-from" name="date_from" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="search-date-to">To Date:</label>
+                                    <input type="date" id="search-date-to" name="date_to" />
+                                </div>
+                            </div>
+                            <button type="submit" class="btn-primary">Search Parts</button>
+                        </form>
+                        <div id="search-results" class="search-results" style="display: none;">
+                            <h4>Search Results:</h4>
+                            <div id="results-table"></div>
+                        </div>
+                    </div>
+                    <div class="tool-card">
+                        <h3>Generate Parts Summary</h3>
+                        <form id="parts-summary-form" class="summary-form">
+                            <div class="form-group">
+                                <label for="parts-list">Parts List (JSON):</label>
+                                <textarea id="parts-list" name="parts_list" rows="6" placeholder='[{"item_id": "EC-2025-001", "quantity": 100, "type": "elastic_rail_clip"}]'></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary">Generate Summary</button>
+                        </form>
+                        <div id="summary-result" class="summary-result" style="display: none;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Railway Official Dashboard -->
+        <section id="official-section" class="section" style="display: none;">
+            <div class="container">
+                <div class="dashboard-header">
+                    <h2>🚂 Railway Official Dashboard</h2>
+                    <p>Scan and verify QR codes on track fittings</p>
+                </div>
+                <div class="scanner-tools">
+                    <div class="tool-card">
+                        <h3>QR Code Scanner</h3>
+                        <div id="webcam-scanner-container">
+                            <div class="webcam-scanner">
+                                <div class="scanner-header">
+                                    <h3>🎥 Live QR Code Scanner</h3>
+                                    <p>Position the QR code within the scanning area</p>
+                                </div>
+                                <div class="camera-controls">
+                                    <select id="camera-select" class="camera-select" aria-label="Camera selection">
+                                        <option value="">Loading cameras...</option>
+                                    </select>
+                                    <button id="switch-camera" class="btn-secondary switch-camera" style="display: none;">🔄 Switch Camera</button>
+                                </div>
+                                <div class="scanner-container">
+                                    <div id="qr-reader" class="qr-scanner">
+                                        <div class="scanner-placeholder">
+                                            <div class="scan-frame">
+                                                <div class="scan-corners">
+                                                    <div class="corner top-left"></div>
+                                                    <div class="corner top-right"></div>
+                                                    <div class="corner bottom-left"></div>
+                                                    <div class="corner bottom-right"></div>
+                                                </div>
+                                                <p>Click "Start Live Scanning" to begin</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="scanner-instructions">
+                                        <div class="instruction-item"><span class="instruction-icon">📱</span><span>Hold device steady</span></div>
+                                        <div class="instruction-item"><span class="instruction-icon">💡</span><span>Ensure good lighting</span></div>
+                                        <div class="instruction-item"><span class="instruction-icon">🎯</span><span>Center QR code in frame</span></div>
+                                    </div>
+                                </div>
+                                <div class="scanner-actions">
+                                    <button id="start-scan-btn" class="btn-primary start-scan">📷 Start Live Scanning</button>
+                                    <button id="stop-scan-btn" class="btn-secondary stop-scan" style="display: none;">⏹️ Stop Scanning</button>
+                                </div>
+                                <div id="scanner-status" class="scanner-status"></div>
+                            </div>
+                        </div>
+                        <div class="scanner-interface">
+                            <div class="upload-zone" onclick="document.getElementById('qr-upload').click()">
+                                <div class="upload-icon">📷</div>
+                                <p>Click to upload QR code image</p>
+                                <p class="upload-hint">Supports: JPG, PNG, TIFF</p>
+                            </div>
+                            <input type="file" id="qr-upload" accept=".jpg,.jpeg,.png,.tiff" style="display: none;" />
+                        </div>
+                        <div id="scan-progress" class="scan-progress" style="display: none;">
+                            <div class="progress-bar"><div class="progress-fill"></div></div>
+                            <p>Scanning QR code...</p>
+                        </div>
+                        <div id="scan-results" class="scan-results" style="display: none;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="ir-footer">
+        <div class="footer-container">
+            <p>&copy; 2025 Indian Railways - Track Fittings QR System</p>
+            <p>Government of India | Ministry of Railways</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js"></script>
+    <script src="/web/src/app.js"></script>
+</body>
+</html>
