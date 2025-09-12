@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact - Indian Railways QR System</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="ir-header">
+    <div class="header-container">
+      <div class="logo-section">
+        <img src="https://www.indianrail.gov.in/enquiry/StaticPages/images/ir_logo.png" alt="Indian Railways" class="ir-logo" />
+        <div class="logo-text">
+          <h1>भारतीय रेल</h1>
+          <h2>INDIAN RAILWAYS</h2>
+          <p>Track Fittings QR System</p>
+        </div>
+      </div>
+      <div class="government-emblem">
+        <img src="https://www.india.gov.in/sites/upload_files/npi/files/emblem_of_india.png" alt="Government of India" class="emblem" />
+        <p>Government of India<br />भारत सरकार</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation -->
+  <nav class="ir-nav" role="navigation" aria-label="Primary">
+    <div class="nav-container">
+      <ul class="nav-menu" role="menubar">
+        <li role="none"><a role="menuitem" href="index.html">Home</a></li>
+        <li role="none"><a role="menuitem" href="about.html">About</a></li>
+        <li role="none"><a role="menuitem" class="active" href="contact.html">Contact</a></li>
+        <li role="none"><a role="menuitem" href="/web/">← Back to System</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="container">
+      <section class="dashboard-header" aria-labelledby="contact-title">
+        <h2 id="contact-title">📮 Contact Indian Railways QR System Team</h2>
+        <p>We’re here to help. Reach out for support, feedback, or collaboration.</p>
+      </section>
+
+      <section class="tool-card" aria-labelledby="contact-details">
+        <h3 id="contact-details">Official Contacts</h3>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Helpline Email</label>
+            <input type="text" value="qr-support@indianrailways.gov.in" aria-readonly="true" readonly />
+          </div>
+          <div class="form-group">
+            <label>Helpline Number</label>
+            <input type="text" value="1800-IR-QR-HELP (1800-47-77-4357)" aria-readonly="true" readonly />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>UDM Integration</label>
+            <input type="text" value="udm-support@ireps.gov.in" aria-readonly="true" readonly />
+          </div>
+          <div class="form-group">
+            <label>TMS Integration</label>
+            <input type="text" value="tms-support@irecept.gov.in" aria-readonly="true" readonly />
+          </div>
+        </div>
+      </section>
+
+      <section class="tool-card" aria-labelledby="feedback-form">
+        <h3 id="feedback-form">Send Feedback</h3>
+        <form id="contact-form" class="generator-form" onsubmit="event.preventDefault(); alert('Thank you for your feedback!'); this.reset();">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input id="name" name="name" type="text" placeholder="Enter your name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="name@example.com" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="topic">Topic</label>
+              <select id="topic" name="topic" required>
+                <option value="">Select a topic</option>
+                <option value="support">Support</option>
+                <option value="feature">Feature Request</option>
+                <option value="bug">Report a Bug</option>
+                <option value="partnership">Partnership</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="role">Your Role</label>
+              <select id="role" name="role" required>
+                <option value="">Select role</option>
+                <option value="manufacturer">Manufacturer</option>
+                <option value="vendor">Vendor</option>
+                <option value="official">Railway Official</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" placeholder="Type your message here..." required></textarea>
+          </div>
+          <button type="submit" class="btn-primary">Submit Feedback</button>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="ir-footer">
+    <div class="footer-container">
+      <p>&copy; 2025 Indian Railways - Track Fittings QR System</p>
+      <p>Government of India | Ministry of Railways</p>
+    </div>
+  </footer>
+</body>
+</html>
