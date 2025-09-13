@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Indian Railways Track Fittings QR System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="contact-page">
+    <!-- Enhanced Header -->
+    <header class="ir-header">
+        <div class="header-container">
+            <!-- Circular Logo Space -->
+            <div class="logo-container">
+                <div class="logo-circle">
+                    <!-- Add your logo image/link here -->
+                    <img src="rela.png" alt="Company Logo" class="logo-image">
+                    <!-- OR -->
+                    <!-- <a href="your-website.com" class="logo-link">Your Logo</a> -->
+                </div>
+            </div>
+            
+            <div class="logo-section">
+                <div class="logo-text">
+                    <h1>RailFit</h1>
+                    <h2>भारतीय रेल</h2>
+                    <p>Inventory Management System</p>
+                </div>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="user-info" style="display: none;">
+                <span class="user-greeting">Welcome, <span class="username"></span></span>
+                <button class="logout-btn" onclick="window.app?.logout()">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Contact Hero Section -->
+            <section class="contact-hero">
+                <div class="hero-content">
+                    <h1 class="hero-title">Get in Touch with Our Team</h1>
+                    <p class="hero-subtitle">We're here to help with technical support, partnerships, and system inquiries</p>
+                </div>
+                <div class="hero-visual">
+                    <i class="fas fa-headset support-icon"></i>
+                    <div class="contact-badges">
+                        <span class="badge"><i class="fas fa-clock"></i> 24/7 Support</span>
+                        <span class="badge"><i class="fas fa-phone"></i> Toll Free</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Methods Grid -->
+            <section class="contact-methods">
+                <div class="section-header">
+                    <h2>Multiple Ways to Reach Us</h2>
+                    <p>Choose the most convenient method for your inquiry</p>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-card primary">
+                        <div class="card-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <h3>Phone Support</h3>
+                        <div class="contact-details">
+                            <p><strong>Toll Free Helpline:</strong></p>
+                            <a href="tel:1800111139" class="contact-link">1800-111-139</a>
+                            <p class="availability">Available 24/7 for emergency support</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="card-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email Support</h3>
+                        <div class="contact-details">
+                            <p><strong>General Inquiries:</strong></p>
+                            <a href="mailto:support@railwayqr.gov.in" class="contact-link">support@railwayqr.gov.in</a>
+                            <p><strong>Technical Support:</strong></p>
+                            <a href="mailto:tech@railwayqr.gov.in" class="contact-link">tech@railwayqr.gov.in</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="card-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Office Location</h3>
+                        <div class="contact-details">
+                            <p><strong>Headquarters:</strong></p>
+                            <address>
+                                Rail Bhawan<br>
+                                Raisina Road, New Delhi<br>
+                                110001, India
+                            </address>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="card-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>Business Hours</h3>
+                        <div class="contact-details">
+                            <p><strong>Monday - Friday:</strong> 9:00 AM - 6:00 PM</p>
+                            <p><strong>Saturday:</strong> 9:00 AM - 2:00 PM</p>
+                            <p><strong>Emergency Support:</strong> 24/7</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Form Section -->
+            <section class="contact-form-section">
+                <div class="form-container">
+                    <div class="form-header">
+                        <h2><i class="fas fa-paper-plane"></i> Send Us a Message</h2>
+                        <p>Fill out the form below and we'll get back to you within 24 hours</p>
+                    </div>
+
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contact-name">
+                                    <i class="fas fa-user"></i> Your Name *
+                                </label>
+                                <input type="text" id="contact-name" name="name" required placeholder="Enter your full name">
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-email">
+                                    <i class="fas fa-envelope"></i> Email Address *
+                                </label>
+                                <input type="email" id="contact-email" name="email" required placeholder="your.email@example.com">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contact-topic">
+                                    <i class="fas fa-tags"></i> Topic *
+                                </label>
+                                <select id="contact-topic" name="topic" required>
+                                    <option value="">Select a topic</option>
+                                    <option value="technical-support">Technical Support</option>
+                                    <option value="feature-request">Feature Request</option>
+                                    <option value="bug-report">Report a Bug</option>
+                                    <option value="partnership">Partnership Inquiry</option>
+                                    <option value="training">Training & Documentation</option>
+                                    <option value="integration">System Integration</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-role">
+                                    <i class="fas fa-user-tag"></i> Your Role
+                                </label>
+                                <select id="contact-role" name="role">
+                                    <option value="">Select role</option>
+                                    <option value="manufacturer">Manufacturer</option>
+                                    <option value="vendor">Vendor</option>
+                                    <option value="railway-official">Railway Official</option>
+                                    <option value="system-admin">System Administrator</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-message">
+                                <i class="fas fa-comment"></i> Message *
+                            </label>
+                            <textarea id="contact-message" name="message" rows="6" required 
+                                placeholder="Please provide detailed information about your inquiry..."></textarea>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn-primary">
+                                <i class="fas fa-paper-plane"></i> Send Message
+                            </button>
+                            <button type="reset" class="btn-secondary">
+                                <i class="fas fa-undo"></i> Clear Form
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Quick Links Sidebar -->
+                <div class="quick-links-sidebar">
+                    <div class="sidebar-card">
+                        <h3><i class="fas fa-link"></i> Quick Links</h3>
+                        <ul class="quick-links">
+                            <li><a href="index.html"><i class="fas fa-home"></i> Back to System</a></li>
+                            <li><a href="about.html"><i class="fas fa-info-circle"></i> About the Project</a></li>
+                            <li><a href="#documentation"><i class="fas fa-book"></i> Documentation</a></li>
+                            <li><a href="#api-docs"><i class="fas fa-code"></i> API Reference</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-card">
+                        <h3><i class="fas fa-external-link-alt"></i> Official Portals</h3>
+                        <ul class="portal-links">
+                            <li>
+                                <a href="https://ireps.gov.in" target="_blank" rel="noopener">
+                                    <i class="fas fa-database"></i> UDM Portal
+                                    <span class="link-desc">Unified Data Management</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://irecept.gov.in" target="_blank" rel="noopener">
+                                    <i class="fas fa-clipboard-check"></i> TMS Portal
+                                    <span class="link-desc">Track Management System</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://indianrailways.gov.in" target="_blank" rel="noopener">
+                                    <i class="fas fa-train"></i> Indian Railways
+                                    <span class="link-desc">Official Website</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-card emergency">
+                        <h3><i class="fas fa-exclamation-triangle"></i> Emergency Support</h3>
+                        <p>For critical system issues that affect operations:</p>
+                        <a href="tel:1800111139" class="emergency-btn">
+                            <i class="fas fa-phone"></i> Call Now: 1800-111-139
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="faq-section">
+                <div class="section-header">
+                    <h2>Frequently Asked Questions</h2>
+                    <p>Quick answers to common questions</p>
+                </div>
+
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="fas fa-question-circle"></i>
+                            <h4>How do I reset my account password?</h4>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Contact your system administrator or use the password reset option during login. For demo accounts, use the provided credentials.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="fas fa-question-circle"></i>
+                            <h4>What image formats are supported for QR scanning?</h4>
+                        </div>
+                        <div class="faq-answer">
+                            <p>The system supports JPG, PNG, TIFF, and BMP formats. For best results, use high-resolution images with good lighting.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="fas fa-question-circle"></i>
+                            <h4>How do I integrate with UDM/TMS portals?</h4>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Integration credentials are managed by your system administrator. Contact technical support for API access and configuration.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="fas fa-question-circle"></i>
+                            <h4>Can I access the system on mobile devices?</h4>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, the system is fully responsive and optimized for mobile devices. Live QR scanning works best on devices with good cameras.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Enhanced Footer (same as in index.html) -->
+    <footer class="ir-footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>Indian Railways QR System</h3>
+                    <p>Revolutionizing railway safety through advanced QR code technology and AI-powered analytics.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#" onclick="window.app?.logout()">Login/Logout</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Support Resources</h3>
+                    <ul>
+                        <li><a href="#documentation">Documentation</a></li>
+                        <li><a href="#api-docs">API Reference</a></li>
+                        <li><a href="#troubleshooting">Troubleshooting</a></li>
+                        <li><a href="contact.html">Technical Support</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Official Portals</h3>
+                    <ul>
+                        <li><a href="https://ireps.gov.in" target="_blank" rel="noopener">UDM Portal <i class="fas fa-external-link-alt"></i></a></li>
+                        <li><a href="https://irecept.gov.in" target="_blank" rel="noopener">TMS Portal <i class="fas fa-external-link-alt"></i></a></li>
+                        <li><a href="https://indianrailways.gov.in" target="_blank" rel="noopener">Indian Railways <i class="fas fa-external-link-alt"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <div class="copyright">
+                        <p>&copy; 2025 Indian Railways. All rights reserved.</p>
+                        <p>Developed for Smart India Hackathon 2025 | Problem Statement ID: 25021</p>
+                    </div>
+                    <div class="footer-links">
+                        <a href="#privacy">Privacy Policy</a>
+                        <a href="#terms">Terms of Service</a>
+                        <a href="#security">Security</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Contact form handling
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Show success message
+            const formContainer = document.querySelector('.form-container');
+            formContainer.innerHTML = `
+                <div class="form-success">
+                    <div class="success-icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>Message Sent Successfully!</h3>
+                    <p>Thank you for contacting us. We'll get back to you within 24 hours.</p>
+                    <button class="btn-primary" onclick="location.reload()">
+                        <i class="fas fa-envelope"></i> Send Another Message
+                    </button>
+                </div>
+            `;
+        });
+
+        // FAQ accordion functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                const answer = faqItem.querySelector('.faq-answer');
+                
+                faqItem.classList.toggle('active');
+                
+                if (faqItem.classList.contains('active')) {
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                } else {
+                    answer.style.maxHeight = '0';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

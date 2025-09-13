@@ -1,0 +1,13 @@
+{
+  "name": "indian-railways-qr-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "serve ./public -l 3000",
+    "build": "echo 'No build step for vanilla JS'",
+    "lint": "echo 'No linter configured'"
+  },
+  "devDependencies": {
+    "serve": "14.2.0"
+  }
+}
